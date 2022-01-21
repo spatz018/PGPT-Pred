@@ -5,14 +5,29 @@ When applying PGPT-Pred via the PLaBAse always cite the respective reference:
 
 Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse: A comprehensive web resource for analyzing the plant growth-promoting potential of plant-associated bacteria. bioRxiv 2021, https://doi.org/10.1101/2021.12.13.472471 (preprint)
 
+## Version History and Warranty
+
+- PLaBAse v.1.01 - Jan 2022 
+- Copyright (C) 2020-2022 Sascha Patz. 
+- This web platform and all its services/tools (e.g., PGPT-db, PGPT-Pred and PIFAR-Pred) come with ABSOLUTELY NO WARRANTY.
+- The code given here is implemented in the backend of PLaBAse and its PGPT-Pred tool.
+- The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above).
+
+
 ## Dependencies:
 1. Interpreters
-* python version 
-* R version 
+* python version 3.7
+* Python packages (pyfasta,concurrent.futures.thread,ete3)
+* R version 4.0.2 (2020-06-22)
 * R packages ()
+2. tools
+* blastp (ncbi-blast-2.10.1)
+* hmmer version 3.3
+* faSplit (current version in path ksrc/src/utils/faSplit after download jksrc folder from : http://hgdownload.cse.ucsc.edu/admin/jksrc.zip)
 
-2. Data
-* PGPT-ontology (via PLaBAse web resource) version 1 (Date:)
+4. Data
+* PGPT-ontology (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
+- An example is currently located in the source folder but entire ontology will be later applicable via API (under developement)
 
 ## Input formats:
 1. blastp+hmmer (PGPTblhm):            genomic protein sequences in FASTA format (sorted by genomic location)
