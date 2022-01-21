@@ -6,7 +6,7 @@
 #           count table reporting PGPTs only.
 #CMD: see python3 pgpt_comp_fun_ascii_v2.py -h
 ##################################################################
-vers = "0.1"
+vers = "0.2"
 # Include standard modules
 import argparse, sys, os, io
 from ete3 import Tree
