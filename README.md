@@ -53,7 +53,7 @@ Accepted file extensions:
 ## Pipelines applied:
 ### 1. Protein/KEGG Annotation/Mapping against PGPT ontology
    1. blastp+hmmer:              genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using `pgpt_blhm.py`
-   2. IMG-KEGG-annoation Mapper: KEGG annotations (one per protein only) are mapped against the PGPT ontology, using `pgpt_comp_fun_ascii_v2.py`
+   2. IMG-KEGG-annoation Mapper: KEGG annotations (one per protein only) are mapped against the PGPT ontology, using `pgpt_comp_fun_ascii_v2.py -of pfar_blast`
 
 ### 2. Pie Chart generation 
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
@@ -75,4 +75,4 @@ Accepted file extensions:
 ## FURTHER OPTION: Statistical analysis of PGPT-Pred results (roary output format)
 - see `Statistics/stat.r`
 - comprises 3 scripts
-- can be run on output of IMG-KEGG-annoation Mapper for all PGPTs on the entire ontology levels
+- can be run on output of IMG-KEGG-annoation Mapper `pgpt_comp_fun_ascii_v2.py -of roary` for all PGPTs on the entire ontology levels
