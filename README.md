@@ -16,7 +16,9 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 
 **The code given here is implemented in the backend of PLaBAse and its PGPT-Pred tool!**
 
-**The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above)!**
+**Here, we we provide only the ontology and annotation exemplarily, for nitrogenase encoding genes and proteins!**
+
+**The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above)!***
 
 ## Dependencies:
 1. Interpreters
@@ -29,7 +31,6 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * hmmer version 3.3
 * faSplit (current version in path ksrc/src/utils/faSplit after download jksrc folder from : http://hgdownload.cse.ucsc.edu/admin/jksrc.zip)
 * KronaTools version 2.8
-
 4. Data
 * PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
 - An example is currently located in the source folder but entire ontology will be later applicable via API (under developement)
