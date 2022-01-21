@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ################### pgpt_blhm.py ############################
-# AUTHOR: Sascha Patz at university of Tuebingen, 2021-09-20
+# AUTHOR: Sascha Patz at university of Tuebingen, 2022-01-11
 # DESCRIPT: Takes protein fasta input file and runs blastp agains pgpt ontology 
 #           ane executes hmmsearch. Generate a pfar-like output format with all
 #           hits
