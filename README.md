@@ -33,7 +33,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * KronaTools version 2.8:(https://github.com/marbl/Krona/wiki)
 4. Data
 * PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
-- An example is currently located in the source and factors folder, but entire ontology will be later applicable via API in future (under developement) 
+- An example is currently located in the source and factors folder, but entire ontology will be applicable via API in future (under developement) 
 - PGPT-ontology (nitrogenase, blastp+hmmer):                `factors/PlantGrowthPromotingTraits.csv`
 - PGPT-protein blastp database (nitrogenase, blastp+hmmer): `factors/PGPT-blastpdb/nitrogenasePGPT`
 - PGPT-ontology (nitrogenase, IMG-KEGG-annoation Mapper):   `src/pgpt_class_kegg.txt`                          
@@ -72,7 +72,7 @@ Accepted file extensions:
 
 ## Results:
 1. Download:   Summary file listing all blastp+hmmer or KEGG-mapped hits of PGPTs
-2. Pie Chart:  Pie Chart  summarizing either all blastp+hmmer hits or all blast hits (ignoring pfam comparison) or KEGG-PGPT hits in a percentage scale on Ontology level 2
+2. Pie Chart:  Pie Chart  summarizing either all blastp+hmmer hits or all blast hits (ignoring pfam comparison) or KEGG-PGPT hits in a percentage scale on ontology level 2
 3. Krona Plot: Krona Plot giving an hierachical overview of either all blastp+hmmer hits or all blast hits (ignoring pfam comparison) of PGPTs or KEGG-PGPT hits across all hierarchical levels
 
 ## Runtime estimation:
