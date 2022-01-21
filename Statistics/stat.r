@@ -16,8 +16,8 @@ library(ggpubr)
 #ENVIRONMENTS
 #################
 #file input to choose (keep one option commented befor run)
-my_data <- read.delim("ENV_GenomeSizeGeneCount_ANOVA.txt") # OPTION (1) mentioned above
-my_data <- read.delim("PGPT_ENV_lev1-Direct_count_ANOVA.txt") #OPTION (2) mentioned above
+my_data <- read.delim("ENV_GenomeSizeGeneCount_ANOVA.txt") # OPTION (1) mentioned above, exemplarily
+my_data <- read.delim("PGPT_ENV_lev1-Direct_count_ANOVA.txt") #OPTION (2) mentioned above, exemplarily
 set.seed(1234)
 dplyr::sample_n(my_data, 10)
 levels(my_data$env)
@@ -47,8 +47,9 @@ print(tt,digits=22)
 #PSITES/PSPHERES
 #################
 #file input to choose (keep one option commented befor run)
-my_data <- read.delim("PSITE_GenomeSizeGeneCount_ANOVA.txt") # OPTION (1) mentioned above
-my_data <- read.delim("PGPT_PSITE_lev1-Direct_count_ANOVA.txt") #OPTION (2) mentioned aboveset.seed(1234)
+my_data <- read.delim("PSITE_GenomeSizeGeneCount_ANOVA.txt") # OPTION (1) mentioned above, exemplarily
+my_data <- read.delim("PGPT_PSITE_lev1-Direct_count_ANOVA.txt") #OPTION (2) mentioned above,exemplarily 
+set.seed(1234)
 dplyr::sample_n(my_data, 10)
 levels(my_data$psite)
 my_data$psite <- ordered(my_data$psite,levels = c("PA_RHIZ", "PA_PHYL", "PA_FLOW", "PA_FRUIT", "PA_SEED"))
@@ -75,8 +76,8 @@ print(tt,digits=22)
 #PPHEN
 #################
 #file input to choose (keep one option commented befor run)
-my_data <- read.delim("PPHEN_GenomeSizeGeneCount_ANOVA.txt") # OPTION (1) mentioned above
-my_data <- read.delim("PGPT_PPHEN_lev1-Direct_count_ANOVA.txt") #OPTION (2) mentioned aboveset.seed(1234)
+my_data <- read.delim("PPHEN_GenomeSizeGeneCount_ANOVA.txt") # OPTION (1) mentioned above, exemplarily
+my_data <- read.delim("PGPT_PPHEN_lev1-Direct_count_ANOVA.txt") #OPTION (2) mentioned above, exemplarily
 set.seed(1234)
 dplyr::sample_n(my_data, 10)
 levels(my_data$pphen)
