@@ -33,7 +33,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * KronaTools version 2.8
 4. Data
 * PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
-- An example is currently located in the source folder but entire ontology will be later applicable via API (under developement)
+- An example is currently located in the source folder but entire ontology will be later applicable via API (under developement) `src/pgpt_class_kegg.txt`
 
 ## Input formats:
 1. blastp+hmmer (PGPTblhm):            genomic protein sequences in FASTA format (sorted by genomic location)
