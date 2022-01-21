@@ -58,11 +58,13 @@ Accepted file extensions:
 ### 1. Protein/KEGG Annotation/Mapping against PGPT ontology
    1. blastp+hmmer:              genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using `pgpt_blhm.py`
    2. IMG-KEGG-annoation Mapper: KEGG annotations (one per protein only) are mapped against the PGPT ontology, using `pgpt_comp_fun_ascii_v2.py -of pfar_blast`
+
 ### 1.1 File Parser
 - if file format is incompatible try to use our parsers: `Scripts/python/`
+
 ### 2. Pie Chart generation 
-   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
-   2. based on KEGG-PGPT mapping, by applying: 
+   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: Web-Java-PlugIn
+   2. based on KEGG-PGPT mapping, by applying: Web-Java-PlugIn
 
 ### 3. Krona Plot generation (kronaScriptPGPT.r)
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: `kronaScriptPGPT.r -m BH`
@@ -79,5 +81,8 @@ Accepted file extensions:
 
 ## FURTHER OPTION: Statistical analysis of PGPT-Pred results (roary output format)
 - see `Statistics/stat.r`
-- comprises 3 scripts
-- can be run on output of IMG-KEGG-annoation Mapper `pgpt_comp_fun_ascii_v2.py -of roary` for all PGPTs on the entire ontology levels
+- comprises 3 scripts for:
+   1. Genome size, gene count and PGPT count analysis
+   2. Scoary output-to-heatmap generation
+   3. PCA plot computation
+- can be run for all PGPT counts on the entire ontology levels, see internal script documentation
