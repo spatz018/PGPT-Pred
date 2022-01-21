@@ -30,7 +30,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * blastp (ncbi-blast-2.10.1)
 * hmmer version 3.3
 * faSplit (current version in path ksrc/src/utils/faSplit after download jksrc folder from : http://hgdownload.cse.ucsc.edu/admin/jksrc.zip)
-* KronaTools version 2.8
+* KronaTools version 2.8:(https://github.com/marbl/Krona/wiki)
 4. Data
 * PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
 - An example is currently located in the source and factors folder, but entire ontology will be later applicable via API in future (under developement) 
@@ -59,9 +59,9 @@ Accepted file extensions:
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
    2. based on KEGG-PGPT mapping, by applying: 
 
-### 3. Krona Plot generation (kronaScriptPGPT-Pred.r -h)
-   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: `kronaScriptPGPT-Pred.r -m BH`
-   2. based on IMG-KEGG-PGPT mapping, by applying: `kronaScriptPGPT-Pred.r -m  IMK`
+### 3. Krona Plot generation (kronaScriptPGPT.r -h)
+   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: `kronaScriptPGPT.r -m BH`
+   2. based on IMG-KEGG-PGPT mapping, by applying: `kronaScriptPGPT.r -m  IMK`
 
 ## Results:
 1. Download:   Summary file listing all blastp+hmmer or KEGG-mapped hits of PGPTs
