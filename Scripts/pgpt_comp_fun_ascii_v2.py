@@ -32,7 +32,7 @@ def check_file_exist(file,info):
 
 def read_classif(classif):
 	if classif == "PGPT":
-		fi = io.open("/nfs/wsi/ab/projects/anupam/server/pb/tools/PGPTpy_v1.4/src/pgpt_class_kegg.txt", "r",encoding='utf8').readlines()
+		fi = io.open("./src/pgpt_class_kegg.txt", "r",encoding='utf8').readlines()
 		cl = convert_tsv(fi)
 		cl_t = Tree(cl, format = 1)
 	return(cl_t)
