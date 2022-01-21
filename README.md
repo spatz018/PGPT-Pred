@@ -6,23 +6,23 @@ When applying PGPT-Pred via the PLaBAse always cite the respective reference:
 Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse: A comprehensive web resource for analyzing the plant growth-promoting potential of plant-associated bacteria. bioRxiv 2021, https://doi.org/10.1101/2021.12.13.472471 (preprint)
 
 
-##Input formats:
+## Input formats:
 1. blastp+hmmer (PGPTblhm):            genomic protein sequences in FASTA format (sorted by genomic location)
 2. IMG-KEGG-annoation Mapper (PGPTpy): genomic protein KEGG annotations (received by IMG Server, or customer format)
 
 KEGG-Costumer formats:
 - Please have a look into the Manual for possible KEGG annotation formats, that are accepted: https://plabase.informatik.uni-tuebingen.de/pb/manual.php
 
-##Pipelines applied:
-###1. Protein/KEGG Annotation/Mapping against PGPT ontology
+## Pipelines applied:
+### 1. Protein/KEGG Annotation/Mapping against PGPT ontology
    1. blastp+hmmer (PGPTblhm):            genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using pgpt_blhm.py
    2. IMG-KEGG-annoation Mapper (PGPTpy): KEGG annotations (one per protein only) are mapped against the PGPT ontology, using pgpt_comp_fun_ascii_v2.py
 
-###1. Pie Chart generation 
+### 1. Pie Chart generation 
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
    2. based on KEGG-PGPT mapping, by applying: 
 
-###3. Krona Plot generation
+### 3. Krona Plot generation
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
    2. based on KEGG-PGPT mapping, by applying: 
 
