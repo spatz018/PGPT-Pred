@@ -79,7 +79,7 @@ Accepted file extensions:
 - blastp+hmmer: genome of 3000 genes/proteins approx. 30 minutes, genome of 6000 genes/proteins approx. 60 minutes, dependent on server workload
 - IMG-KEGG-annoation Mapper: approx. 15 minutes, dependent on server workload
 
-## FURTHER OPTION: Statistical analysis of PGPT-Pred results (roary output format)
+## FURTHER OPTION: Statistical analysis of PGPT-Pred results (raw counts, Scoary output format)
 - see `Statistics/stat.r`
 - comprises 3 scripts for:
    1. Genome size, gene count and PGPT count analysis
