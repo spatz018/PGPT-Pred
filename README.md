@@ -25,7 +25,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * python version 3.7
 * Python packages (pyfasta,concurrent.futures.thread,ete3)
 * R version 4.0.2 (2020-06-22)
-* R packages (phyloseq,https://raw.githubusercontent.com/mahendra-mariadassou/phyloseq-extended/master/R/load-extra-functions.R, psadd, argparse, stringr)
+* R libraries (phyloseq,https://raw.githubusercontent.com/mahendra-mariadassou/phyloseq-extended/master/R/load-extra-functions.R, psadd, argparse, stringr)
 2. Tools
 * blastp (ncbi-blast-2.10.1)
 * hmmer version 3.3
@@ -86,3 +86,4 @@ Accepted file extensions:
    2. Scoary output-to-heatmap generation
    3. PCA plot computation
 - can be run for all PGPT counts on the entire ontology levels, see internal script documentation
+- Dependencies (libraries): dplyr, gplots, ggplot2, ggpubr, varhandle, RColorBrewer, FactoMineR, factoextra, corrplot, pca3d, vegan, ecodist, ape, cluster, devtools, ggbiplot
