@@ -20,7 +20,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * Python packages (pyfasta,concurrent.futures.thread,ete3)
 * R version 4.0.2 (2020-06-22)
 * R packages (phyloseq,https://raw.githubusercontent.com/mahendra-mariadassou/phyloseq-extended/master/R/load-extra-functions.R, psadd, argparse, stringr)
-2. tools
+2. Tools
 * blastp (ncbi-blast-2.10.1)
 * hmmer version 3.3
 * faSplit (current version in path ksrc/src/utils/faSplit after download jksrc folder from : http://hgdownload.cse.ucsc.edu/admin/jksrc.zip)
