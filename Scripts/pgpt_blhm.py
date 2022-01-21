@@ -4,7 +4,7 @@
 # DESCRIPT: Takes protein fasta input file and runs blastp agains pgpt ontology 
 #           ane executes hmmsearch. Generate a pfar-like output format with all
 #           hits
-#           # CMD: see python3 pgpt_blhm.py -h
+# CMD: see python3 pgpt_blhm.py -h
 ##################################################################
 vers = "0.1"
 # Include standard modules
