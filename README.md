@@ -71,3 +71,7 @@ Accepted file extensions:
 ## Runtime estimation:
 - blastp+hmmer: genome of 3000 genes/proteins approx. 30 minutes, genome of 6000 genes/proteins approx. 60 minutes, dependent on server workload
 - IMG-KEGG-annoation Mapper: approx. 15 minutes, dependent on server workload
+
+## Statistical analysis of PGPT-Pred results (roary output format)
+- see `Statistics/stat.r`
+- can be run on all PGPT ontology levels
