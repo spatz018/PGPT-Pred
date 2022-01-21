@@ -54,9 +54,9 @@ Accepted file extensions:
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
    2. based on KEGG-PGPT mapping, by applying: 
 
-### 3. Krona Plot generation (kronaScriptPGPT.r -h)
-   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: `kronaScriptPGPT.r -m BH`
-   2. based on IMG-KEGG-PGPT mapping, by applying: `kronaScriptPGPT.r -m IMK`
+### 3. Krona Plot generation (kronaScriptPGPT-Pred.r -h)
+   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: `kronaScriptPGPT-Pred.r -m BH`
+   2. based on IMG-KEGG-PGPT mapping, by applying: `kronaScriptPGPT-Pred.r -m IMK`
 
 ## Results:
 1. Download:   Summary file listing all blastp+hmmer or KEGG-mapped hits of PGPTs
