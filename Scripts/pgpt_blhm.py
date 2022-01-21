@@ -28,12 +28,12 @@ def readfactors(factor):
 	return(fac_d)
 
 def hmmscan(seq_file,op,query_id,pf_hmm,eval,threads):
-	os.system("/nfs/wsi/ab/projects/anupam/server/pb/tools/hmmer-3.3/src/hmmsearch --tblout "+str(op+"/").replace("//","/")+query_id+".hmo -E "+eval+" --cpu "+threads+" "+pf_hmm+" "+seq_file)
+	os.system("hmmsearch --tblout "+str(op+"/").replace("//","/")+query_id+".hmo -E "+eval+" --cpu "+threads+" "+pf_hmm+" "+seq_file)
 	fh_l = io.open(str(op+"/").replace("//","/")+query_id+".hmo","r",encoding='utf8').readlines()[3:]
 	return(gethmmhits(fh_l))
 
 def blastseq(seq_file,op,fac_db,max_tseq,al_n,eval,threads):
-	os.system("/nfs/wsi/ab/projects/anupam/server/pb/tools/ncbi-blast-2.10.1+/bin/blastp -query "+seq_file+" -db "+fac_db+" -out "+seq_file+".blast7 -num_alignments "+str(al_n)+" -evalue "+str(eval)+" -outfmt 7 -num_threads "+str(threads))
+	os.system("blastp -query "+seq_file+" -db "+fac_db+" -out "+seq_file+".blast7 -num_alignments "+str(al_n)+" -evalue "+str(eval)+" -outfmt 7 -num_threads "+str(threads))
 
 def reafblastfile(query_id,op):
 	fb_l = io.open(str(op+"/").replace("//","/")+query_id+".blast7","r",encoding='utf8').readlines()
@@ -124,9 +124,9 @@ if __name__ == "__main__":
 	seq_file = args.input
 	op = args.outpath
 	query_id = seq_file.split("/")[-1].split("_")[0]
-	fac_db = "/nfs/wsi/ab/projects/anupam/server/pb/tools/PGPTblhm/data/factors/PGPT_BASE_nr_Aug2021"
-	fac_inf = "/nfs/wsi/ab/projects/anupam/server/pb/tools/PGPTblhm/data/factors/PlantGrowthPromotingTraits.csv"
-	pfam_hmm = "/nfs/wsi/ab/projects/anupam/server/pb/tools/PGPTblhm/data/pfam/Pfam-A.hmm"
+	fac_db = "./factors/nitrogenasePGPT"
+	fac_inf = "./factors/PlantGrowthPromotingTraits.csv"
+	pfam_hmm = "./factors/Pfam-A.hmm"
 	o_hfname = seq_file+".hmo"
 	threads = str(80)
 	pthr = str(8)
@@ -134,7 +134,7 @@ if __name__ == "__main__":
 	max_tseq = str(1)
 	al_n =str(1)
 	fac_dic = readfactors(fac_inf)
-	os.system("/nfs/wsi/ab/projects/anupam/server/pb/tools/faSplit sequence "+seq_file+" 12 "+str(op+"/").replace("//","/")+query_id+"_")
+	os.system("faSplit sequence "+seq_file+" 12 "+str(op+"/").replace("//","/")+query_id+"_")
 	fi_l = []
 	for file in os.listdir(str(op+"/").replace("//","/")):
 		if file.endswith(".fa"):
