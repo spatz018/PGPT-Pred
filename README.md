@@ -9,10 +9,10 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 
 - PLaBAse v.1.01 - Jan 2022 
 - Copyright (C) 2020-2022 Sascha Patz. 
-- This web platform and all its services/tools (e.g., PGPT-db, PGPT-Pred and PIFAR-Pred) come with ABSOLUTELY NO WARRANTY.
-- The code given here is implemented in the backend of PLaBAse and its PGPT-Pred tool.
-- The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above).
 
+**NOTE: This web platform and all its services/tools (e.g., PGPT-db, PGPT-Pred and PIFAR-Pred) come with ABSOLUTELY NO WARRANTY!**
+**NOTE: The code given here is implemented in the backend of PLaBAse and its PGPT-Pred tool!**
+**NOTE: The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above)!**
 
 ## Dependencies:
 1. Interpreters
@@ -27,7 +27,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * KronaTools version 2.8
 
 4. Data
-* PGPT-ontology (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
+* PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
 - An example is currently located in the source folder but entire ontology will be later applicable via API (under developement)
 
 ## Input formats:
