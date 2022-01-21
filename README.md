@@ -35,7 +35,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
 - An example is currently located in the source and factors folder, but entire ontology will be later applicable via API in future (under developement) 
 - PGPT-ontology (nitrogenase, blastp+hmmer):                `factors/PlantGrowthPromotingTraits.csv`
-- PGPT-protein blastp database (nitrogenase, blastp+hmmer): `factors/nitrogenasePGPT`
+- PGPT-protein blastp database (nitrogenase, blastp+hmmer): `factors/PGPT-blastpdb/nitrogenasePGPT`
 - PGPT-ontology (nitrogenase, IMG-KEGG-annoation Mapper):   `src/pgpt_class_kegg.txt`                          
 
 
