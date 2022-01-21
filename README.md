@@ -18,7 +18,7 @@ KEGG-Costumer formats:
    1. blastp+hmmer (PGPTblhm):            genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using pgpt_blhm.py
    2. IMG-KEGG-annoation Mapper (PGPTpy): KEGG annotations (one per protein only) are mapped against the PGPT ontology, using pgpt_comp_fun_ascii_v2.py
 
-### 1. Pie Chart generation 
+### 2. Pie Chart generation 
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
    2. based on KEGG-PGPT mapping, by applying: 
 
