@@ -21,6 +21,10 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 KEGG-Costumer formats:
 - Please have a look into the Manual for possible KEGG annotation formats, that are accepted: https://plabase.informatik.uni-tuebingen.de/pb/manual.php
 
+Accepted file extensions:
+- fasta, fas, fas_aa, faa, txt (genomic proteins, received by NCBI, RAST, IMG, Uniprot, ...)
+- txt (genomic proteins KEGG annotations, as tab separated file)
+
 ## Pipelines applied:
 ### 1. Protein/KEGG Annotation/Mapping against PGPT ontology
    1. blastp+hmmer (PGPTblhm):            genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using pgpt_blhm.py
