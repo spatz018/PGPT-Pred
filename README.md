@@ -19,11 +19,12 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * python version 3.7
 * Python packages (pyfasta,concurrent.futures.thread,ete3)
 * R version 4.0.2 (2020-06-22)
-* R packages ()
+* R packages (phyloseq,https://raw.githubusercontent.com/mahendra-mariadassou/phyloseq-extended/master/R/load-extra-functions.R, psadd, argparse, stringr)
 2. tools
 * blastp (ncbi-blast-2.10.1)
 * hmmer version 3.3
 * faSplit (current version in path ksrc/src/utils/faSplit after download jksrc folder from : http://hgdownload.cse.ucsc.edu/admin/jksrc.zip)
+* KronaTools version 2.8
 
 4. Data
 * PGPT-ontology (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
@@ -49,9 +50,9 @@ Accepted file extensions:
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
    2. based on KEGG-PGPT mapping, by applying: 
 
-### 3. Krona Plot generation
-   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
-   2. based on KEGG-PGPT mapping, by applying: 
+### 3. Krona Plot generation (kronaScriptPGPT.r -h)
+   1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying: kronaScriptPGPT.r -m BH
+   2. based on IMG-KEGG-PGPT mapping, by applying: kronaScriptPGPT.r -m IMK
 
 ## Results:
 1. Download:   Summary file listing all blastp+hmmer or KEGG-mapped hits of PGPTs
