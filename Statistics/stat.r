@@ -108,7 +108,7 @@ print(tt,digits=22)
 #       Input format: CLASS<tab>Class1<tab>Class2 ...ClassN
 #                     PGPT1<tab>value<tab>value ...
 #                     PGPT2 ...
-#      (Class1 to ClassN states for the respective class labels for environments, plant sites, ... see above)               ...
+#      (Class1 to ClassN states for the respective class labels for environments, plant sites, ... see above)
 #      (Valuse are log Odds Ratios) 
 #     (Scoary input files achieved by pgpt_comp_fun_ascii_v2.py if img -of roary and supplemental tables 2-4 https://doi.org/10.1101/2021.12.13.472471)
 #
@@ -171,57 +171,35 @@ library(devtools)
 install_github("vqv/ggbiplot")
 library(ggbiplot)
 
-
+#Data acquisition and formatting
 col <- colorRampPalette(brewer.pal(10, "RdYlBu"))(256)
 
-tab = read.csv("PGPT-COUNT_LEV2_PPHEN.txt",header = TRUE, sep = "\t", dec = ".")
+tab = read.csv("PGPT-COUNT_LEV2_PPHEN.txt",header = TRUE, sep = "\t", dec = ".") #exemplarily
 t <- as.matrix(tab[,-1])
 storage.mode(t) <- "numeric"
 rownames(t) <- tab$IMG_SAMPLE_ID
 
-res.pca <- PCA(tab[3:10], graph = FALSE)
+res.pca <- PCA(tab[3:10], graph = FALSE) #tab[3:10] might be extended for other ontology levels, as done above
 print(res.pca)
+#Eigen values
 eig.val <- get_eigenvalue(res.pca)
 eig.val
 fviz_eig(res.pca, addlabels = TRUE, ylim = c(0, 80))
 var <- get_pca_var(res.pca)
 var
-# Coordinates
-head(var$coord)
-# Cos2: quality on the factore map
-head(var$cos2)
-# principal components contributions
-head(var$contrib)
-fviz_pca_var(res.pca, col.var = "black")
-plot.new(); dev.off();
-corrplot(var$cos2, is.corr=FALSE) 
-fviz_pca_var(res.pca, col.var = "cos2",
-             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"), 
-             repel = TRUE # Avoid text overlapping
-)
-
-fviz_pca_var(res.pca, col.var = "contrib",
-             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07")
-)
-
-ind <- get_pca_ind(res.pca)
-fviz_pca_ind(res.pca,
-             geom.ind = "point", # show points only (nbut not "text")
-             col.ind = tab$ENVIRONMENT, # color by groups
-             palette = c("#F6E4D6","#FAE6A3", "#E9B48A","#A5A6A6","#7EAB55","#436FBE","#79582C"),
-             addEllipses = TRUE, # Concentration ellipses
-             legend.title = "Groups",
-             label = "var", col.var = "black", repel = TRUE,
-)
-
-#3d
-pca <- prcomp(tab[3:10], scale.=TRUE, center.=TRUE)
-gr <- factor(tab[,11])
+corrplot(var$cos2, is.corr=FALSE)
+#PCA plotting
+pca <- prcomp(tab[3:10], scale.=TRUE, center.=TRUE) #tab[3:10] might be extended for other ontology levels, as done above
+gr <- factor(tab[,11]) # should call last column in file, so if changes done above, adapt 
 summary(gr)
-pca3d(pca, group=gr, show.plane=FALSE)
+#3d (uncomment next line)
+#pca3d(pca, group=gr, show.plane=FALSE)
+#2d
+#Option 1
 pca2d(pca, group=gr, legend="topleft", biplot=TRUE, biplot.vars=8, 
       palette=c("#F38D10", "#00B04F"),show.centroids = TRUE,
       show.shadows = FALSE, radius = 0.7,
       show.ellipses = TRUE, ellipse.ci = 0.95)
+#Option 2
 ggbiplot(pca,ellipse=TRUE,  labels=rownames(tab[3:10]), groups=gr, 
          choices=c(1,2),obs.scale = 0.5, var.scale = 0.5,var.axes=TRUE)
