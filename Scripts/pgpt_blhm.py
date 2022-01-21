@@ -124,7 +124,7 @@ if __name__ == "__main__":
 	seq_file = args.input
 	op = args.outpath
 	query_id = seq_file.split("/")[-1].split("_")[0]
-	fac_db = "./factors/nitrogenasePGPT"
+	fac_db = "./factors/PGPT-blastpdb/nitrogenasePGPT"
 	fac_inf = "./factors/PlantGrowthPromotingTraits.csv"
 	pfam_hmm = "./factors/Pfam-A.hmm"
 	o_hfname = seq_file+".hmo"
