@@ -33,11 +33,15 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 * KronaTools version 2.8
 4. Data
 * PGPT-ontology and respective blastp database (via PLaBAse web resource) version 1.01 (Date: Dec2021): 
-- An example is currently located in the source folder but entire ontology will be later applicable via API (under developement) `src/pgpt_class_kegg.txt`
+- An example is currently located in the source and factors folder, but entire ontology will be later applicable via API in future (under developement) 
+- PGPT-ontology (nitrogenase, blastp+hmmer):                `factors/PlantGrowthPromotingTraits.csv`
+- PGPT-protein blastp database (nitrogenase, blastp+hmmer): `factors/nitrogenasePGPT`
+- PGPT-ontology (nitrogenase, IMG-KEGG-annoation Mapper):   `src/pgpt_class_kegg.txt`                          
+
 
 ## Input formats:
-1. blastp+hmmer (PGPTblhm):            genomic protein sequences in FASTA format (sorted by genomic location)
-2. IMG-KEGG-annoation Mapper (PGPTpy): genomic protein KEGG annotations (received by IMG Server, or customer format)
+1. blastp+hmmer:              genomic protein sequences in FASTA format (sorted by genomic location)
+2. IMG-KEGG-annoation Mapper: genomic protein KEGG annotations (received by IMG Server, or customer format)
 
 KEGG-Costumer formats:
 - Please have a look into the Manual for possible KEGG annotation formats, that are accepted: https://plabase.informatik.uni-tuebingen.de/pb/manual.php
@@ -48,8 +52,8 @@ Accepted file extensions:
 
 ## Pipelines applied:
 ### 1. Protein/KEGG Annotation/Mapping against PGPT ontology
-   1. blastp+hmmer (PGPTblhm):            genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using `pgpt_blhm.py`
-   2. IMG-KEGG-annoation Mapper (PGPTpy): KEGG annotations (one per protein only) are mapped against the PGPT ontology, using `pgpt_comp_fun_ascii_v2.py`
+   1. blastp+hmmer:              genomic protein sequences are aligned against proteins associated with the PGPT ontology and respective PFAM domain comparison is achieved by hmmer against the PFAM domains using `pgpt_blhm.py`
+   2. IMG-KEGG-annoation Mapper: KEGG annotations (one per protein only) are mapped against the PGPT ontology, using `pgpt_comp_fun_ascii_v2.py`
 
 ### 2. Pie Chart generation 
    1. based on blastp+hmmer results or all blast hits (ignoring pfam comparison) of PGPTs, by applying:
