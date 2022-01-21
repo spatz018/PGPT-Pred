@@ -5,6 +5,14 @@ When applying PGPT-Pred via the PLaBAse always cite the respective reference:
 
 Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse: A comprehensive web resource for analyzing the plant growth-promoting potential of plant-associated bacteria. bioRxiv 2021, https://doi.org/10.1101/2021.12.13.472471 (preprint)
 
+## Dependencies:
+1. Interpreters
+* python version 
+* R version 
+* R packages ()
+
+2. Data
+* PGPT-ontology (via PLaBAse web resource) version 1 (Date:)
 
 ## Input formats:
 1. blastp+hmmer (PGPTblhm):            genomic protein sequences in FASTA format (sorted by genomic location)
