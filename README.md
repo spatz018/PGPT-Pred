@@ -58,3 +58,7 @@ Accepted file extensions:
 1. Download:   Summary file listing all blastp+hmmer or KEGG-mapped hits of PGPTs
 2. Pie Chart:  Pie Chart  summarizing either all blastp+hmmer hits or all blast hits (ignoring pfam comparison) or KEGG-PGPT hits in a percentage scale on Ontology level 2
 3. Krona Plot: Krona Plot giving an hierachical overview of either all blastp+hmmer hits or all blast hits (ignoring pfam comparison) of PGPTs or KEGG-PGPT hits across all hierarchical levels
+
+## Runtime estimation:
+- blastp+hmmer: genome of 3000 genes/proteins approx. 30 minutes, genome of 6000 genes/proteins approx. 60 minutes, dependent on server workload
+- IMG-KEGG-annoation Mapper: approx. 15 minutes, dependent on server workload
