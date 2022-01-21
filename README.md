@@ -10,11 +10,13 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 - PLaBAse v.1.01 - Jan 2022 
 - Copyright (C) 2020-2022 Sascha Patz. 
 
-**NOTE: This web platform and all its services/tools (e.g., PGPT-db, PGPT-Pred and PIFAR-Pred) come with ABSOLUTELY NO WARRANTY!**
+**NOTE:** 
 
-**NOTE: The code given here is implemented in the backend of PLaBAse and its PGPT-Pred tool!**
+**This web platform and all its services/tools (e.g., PGPT-db, PGPT-Pred and PIFAR-Pred) come with ABSOLUTELY NO WARRANTY!**
 
-**NOTE: The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above)!**
+**The code given here is implemented in the backend of PLaBAse and its PGPT-Pred tool!**
+
+**The PGPT-Pred tool is only functional with its entire features and complete PGPT ontology when applied via the online platform (see link above)!**
 
 ## Dependencies:
 1. Interpreters
