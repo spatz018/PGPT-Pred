@@ -1,6 +1,6 @@
 # PGPT-Pred
 
-<img src="./Images/PGPT-Pred_symb.jpg" width="130" height="100">
+<img src="./Images/PGPT-Pred_symb.jpg" width="110" height="100">
 
 The PGPT-Pred tool (https://plabase.informatik.uni-tuebingen.de/pb/form.php?var=PGPT-Pred) is part of the web resource PLaBAse (https://plabase.informatik.uni-tuebingen.de/pb/plabase.php) and allows annotation of bacterial plant growth-promoting traits (proteins), short "PGPTs" of single genomes, using blastp+hmmer or IMG-KEGG-annoation Mapper against the PGPT ontology.
 
