@@ -32,8 +32,8 @@ def hmmscan(seq_file,op,query_id,pf_hmm,eval,threads):
 	fh_l = io.open(str(op+"/").replace("//","/")+query_id+".hmo","r",encoding='utf8').readlines()[3:]
 	return(gethmmhits(fh_l))
 
-def blastseq(seq_file,op,fac_db,max_tseq,al_n,eval,threads):
-	os.system("blastp -query "+seq_file+" -db "+fac_db+" -out "+seq_file+".blast7 -num_alignments "+str(al_n)+" -evalue "+str(eval)+" -outfmt 7 -num_threads "+str(threads))
+def blastseq(seq_file,op,fac_db,max_tseq,al_n,cov,eval,threads):
+	os.system("blastp -query "+seq_file+" -db "+fac_db+" -out "+seq_file+".blast7 -num_alignments "+str(al_n)+"-qcov_hsp_perc "+str(cov)+" -evalue "+str(eval)+" -outfmt 7 -num_threads "+str(threads))
 
 def reafblastfile(query_id,op):
 	fb_l = io.open(str(op+"/").replace("//","/")+query_id+".blast7","r",encoding='utf8').readlines()
@@ -131,6 +131,7 @@ if __name__ == "__main__":
 	threads = str(80)
 	pthr = str(8)
 	eval = str(1e-5)
+	cov = str(80)
 	max_tseq = str(1)
 	al_n =str(1)
 	fac_dic = readfactors(fac_inf)
@@ -139,7 +140,7 @@ if __name__ == "__main__":
 	for file in os.listdir(str(op+"/").replace("//","/")):
 		if file.endswith(".fa"):
 			fi_l.append(os.path.join(str(op+"/").replace("//","/"), file))
-	hmm_dic = hmmscan(seq_file,op,query_id,pfam_hmm,eval,threads)
+	hmm_dic = hmmscan(seq_file,op,query_id,pfam_hmm,cov,eval,threads)
 	with ThreadPoolExecutor(max_workers=20) as executor:
 		#hmm_dic = hmmscan(seq_file,op,query_id,pfam_hmm,eval,threads)
 		for s_file in fi_l:
