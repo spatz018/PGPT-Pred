@@ -128,8 +128,8 @@ if __name__ == "__main__":
 	fac_inf = "./factors/PlantGrowthPromotingTraits.csv"
 	pfam_hmm = "./factors/Pfam-A.hmm"
 	o_hfname = seq_file+".hmo"
-	threads = str(80)
-	pthr = str(8)
+	threads = str(8)
+	pthr = str(2)
 	eval = str(1e-5)
 	cov = str(80)
 	max_tseq = str(1)
