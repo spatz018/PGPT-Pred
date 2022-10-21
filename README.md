@@ -2,7 +2,7 @@
 
 <img src="./Images/PGPT-Pred_symb.jpg" width="110" height="100">
 
-The PGPT-Pred tool (https://plabase.informatik.uni-tuebingen.de/pb/form.php?var=PGPT-Pred) is part of the web resource PLaBAse (https://plabase.informatik.uni-tuebingen.de/pb/plabase.php) and allows annotation of bacterial plant growth-promoting traits (proteins), short "PGPTs" of single genomes, using blastp+hmmer or IMG-KEGG-annoation Mapper against the PGPT ontology.
+The PGPT-Pred tool (https://plabase.cs.uni-tuebingen.de/pb/form.php?var=PGPT-Pred) is part of the web resource PLaBAse (https://plabase.cs.uni-tuebingen.de/pb/plabase.php) and allows annotation of bacterial plant growth-promoting traits (proteins), short "PGPTs" of single genomes, using blastp+hmmer or IMG-KEGG-annoation Mapper against the PGPT ontology.
 
 When applying PGPT-Pred via the PLaBAse always cite the respective reference:
 
@@ -47,7 +47,7 @@ Patz S, Gautam A, Becker M, Ruppel S, Rodríguez-Palenzuela P, Huson DH. PLaBAse
 2. IMG-KEGG-annoation Mapper: genomic protein KEGG annotations (received by IMG Server, or customer format)
 
 KEGG-Costumer formats:
-- Please have a look into the Manual for possible KEGG annotation formats, that are accepted: https://plabase.informatik.uni-tuebingen.de/pb/manual.php
+- Please have a look into the Manual for possible KEGG annotation formats, that are accepted: https://plabase.cs.uni-tuebingen.de/pb/manual.php
 
 Accepted file extensions:
 - fasta, fas, fas_aa, faa, txt (genomic proteins, received by NCBI, RAST, IMG, Uniprot, ...)
